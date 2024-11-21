@@ -1,0 +1,20 @@
+# Visual Studio-filer
+.vs/
+*.suo
+*.user
+*.cache
+*.ilk
+*.pdb
+*.obj
+*.log
+*.vsidx
+*.vspx
+*.sln.ide
+
+# Binär- och byggmappar
+bin/
+obj/
+
+# Andra tillfälliga filer
+*.tmp
+*.log
