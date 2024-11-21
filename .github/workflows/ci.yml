@@ -17,7 +17,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Setup .NET
+    # Setup .NET för backend
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
@@ -25,13 +25,13 @@ jobs:
 
     # Bygg och testa backend
     - name: Build and Test Backend
-      working-directory: ./backend
+      working-directory: ./ogabogaShop
       run: |
         dotnet restore
         dotnet build --configuration Release
         dotnet test --no-build --verbosity normal
 
-    # Setup Node.js
+    # Setup Node.js för frontend
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
