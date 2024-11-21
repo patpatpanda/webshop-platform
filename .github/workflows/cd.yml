@@ -10,17 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Klona koden från GitHub-repo
     - name: Checkout code
       uses: actions/checkout@v3
 
+    # Ställ in .NET SDK
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0
 
+    # Bygg och publicera backend-projektet
+    - name: Build and Publish Backend
+      run: |
+        dotnet restore
+        dotnet build --configuration Release
+        dotnet publish --configuration Release --output publish
+
+    # Deploya till Azure App Service
     - name: Deploy to Azure
       uses: azure/webapps-deploy@v2
       with:
-        app-name: "YourAzureAppServiceName"
+        app-name: "YourAzureAppServiceName" # Byt ut mot ditt appnamn
         slot-name: "production"
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: ./publish
