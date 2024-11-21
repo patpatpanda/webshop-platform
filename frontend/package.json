@@ -1,0 +1,11 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Placeholder frontend for webshop-platform",
+  "scripts": {
+    "build": "echo 'Skipping build. Frontend not implemented yet.'",
+    "test": "echo 'Skipping tests. Frontend not implemented yet.'"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
