@@ -23,21 +23,20 @@ jobs:
       with:
         dotnet-version: 6.0
 
-    # Bygg och testa backend
+    # Bygg och testa backend (utan att använda ./backend)
     - name: Build and Test Backend
-      working-directory: ./backend
       run: |
         dotnet restore
         dotnet build --configuration Release
         dotnet test --no-build --verbosity normal
 
-    # Setup Node.js
+    # Setup Node.js för frontend
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 18
 
-    # Bygg och testa frontend
+    # Bygg och testa frontend (frontend-koden förväntas ligga i ./frontend)
     - name: Build and Test Frontend
       working-directory: ./frontend
       run: |
