@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ogabogaShop", "ogabogaShop\ogabogaShop.csproj", "{0B834CE1-3316-4AE4-901D-994F98BE2514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webshop.Tests", "Webshop.Tests\Webshop.Tests.csproj", "{B1C9A990-7FAE-453F-99D7-DF5FB0524ED3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B834CE1-3316-4AE4-901D-994F98BE2514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B834CE1-3316-4AE4-901D-994F98BE2514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B834CE1-3316-4AE4-901D-994F98BE2514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B834CE1-3316-4AE4-901D-994F98BE2514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C9A990-7FAE-453F-99D7-DF5FB0524ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C9A990-7FAE-453F-99D7-DF5FB0524ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C9A990-7FAE-453F-99D7-DF5FB0524ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C9A990-7FAE-453F-99D7-DF5FB0524ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
