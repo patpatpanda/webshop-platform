@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ogabogaShop\ogabogaShop.csproj" />
+    <ProjectReference Include="..\ogabogaShop\ogabogaShop\ogabogaShop.csproj" />
   </ItemGroup>
 
   <ItemGroup>
