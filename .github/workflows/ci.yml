@@ -41,11 +41,14 @@ jobs:
       with:
         node-version: 18
 
-    # Bygg och testa frontend (om package.json finns)
+    # Kontrollera om package.json finns och bygg frontend
     - name: Build and Test Frontend
-      if: exists('./frontend/package.json')
       working-directory: ./frontend
       run: |
-        npm install
-        npm run build
-        npm run test
+        if [ -f "package.json" ]; then
+          npm install
+          npm run build
+          npm run test
+        else
+          echo "No package.json found, skipping frontend build and test."
+        fi
