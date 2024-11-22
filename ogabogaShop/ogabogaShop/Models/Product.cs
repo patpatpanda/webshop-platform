@@ -1,12 +1,24 @@
 ﻿namespace ogabogaShop.Models
 {
-    public class Product
+     public class Product
     {
+        private decimal _price;
+
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public decimal Price { get; set; }
-        public int Stock { get; set; }
+
+        public decimal Price
+        {
+            get => _price;
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Price cannot be negative.");
+                }
+                _price = value;
+            }
+        }
     }
 
 }
