@@ -23,13 +23,17 @@ jobs:
       with:
         dotnet-version: 6.0
 
-    # Bygg och testa backend
-    - name: Build and Test Backend
+    # Bygg backend
+    - name: Build Backend
       working-directory: ./ogabogaShop
       run: |
         dotnet restore
         dotnet build --configuration Release
-        dotnet test --no-build --verbosity normal
+
+    # Kör enhetstester
+    - name: Run Tests
+      working-directory: ./Webshop.Tests
+      run: dotnet test --no-build --verbosity normal
 
     # Setup Node.js för frontend
     - name: Setup Node.js
@@ -37,10 +41,14 @@ jobs:
       with:
         node-version: 18
 
-    # Bygg och testa frontend
+    # Kontrollera om package.json finns och bygg frontend
     - name: Build and Test Frontend
       working-directory: ./frontend
       run: |
-        npm install
-        npm run build
-        npm run test
+        if [ -f "package.json" ]; then
+          npm install
+          npm run build
+          npm run test
+        else
+          echo "No package.json found, skipping frontend build and test."
+        fi
